@@ -4,7 +4,7 @@ all:
 	clang *.c -o main
 
 debug:
-	clang *.c -o main -DDEBUG
+	clang *.c -o main -DDEBUG_TRACE
 
 clean:
 	rm main
