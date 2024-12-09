@@ -95,8 +95,8 @@ static void emitByte(uint8_t byte){
 }
 
 static void emitBytes(uint8_t byte1, uint8_t byte2){
-  writeChunk(currentChunk(), byte1, parser.previous.line);
-  writeChunk(currentChunk(), byte2, parser.previous.line);
+  emitByte(byte1);
+  emitByte(byte2);
 }
 
 static void emitReturn(){
@@ -152,7 +152,7 @@ static void grouping(){
 
 static void number(){
   double value = strtod(parser.previous.start, NULL);
-  emitByte(value);
+  emitConstant(value);
 }
 
 static void unary(){
