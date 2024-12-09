@@ -36,7 +36,7 @@ static char *readFile(const char *path) {
     fprintf(stderr, "not enough memory to read file \"%s\".\n", path);
     exit(74);
   }
-  size_t bytesRead = fread(buffer, sizeof(char), fileSize, buffer);
+  size_t bytesRead = fread(buffer, sizeof(char), fileSize, file);
   buffer[bytesRead] = '\0';
 
   fclose(file);
