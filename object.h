@@ -3,7 +3,6 @@
 
 #include "common.h"
 #include "value.h"
-#include "object.h"
 
 #define OBJ_TYPE(value) (AS_OBJ(value)->type)
 
@@ -26,6 +25,7 @@ struct ObjString {
   char* chars;
 };
 
+ObjString* takeString(char* chars, int length);
 ObjString* copyString(const char* chars, int length);
 
 void printObject(Value value);
