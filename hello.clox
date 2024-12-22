@@ -1,1 +1,4 @@
-"true" + " is not"
+var x = "true";
+print 123;
+print "hello world";
+print x;
