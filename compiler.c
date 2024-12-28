@@ -347,6 +347,7 @@ static void namedVariable(Token name, bool canAssign) {
     getOp = OP_GET_LOCAL;
     setOp = OP_SET_LOCAL;
   } else {
+    arg = identiferConstant(&name);
     getOp = OP_GET_GLOBAL;
     setOp = OP_SET_GLOBAL;
   }
