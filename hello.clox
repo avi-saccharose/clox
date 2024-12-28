@@ -1,4 +1,6 @@
 var x = "true";
-print 123;
 print "hello world";
 print x;
+x = 124;
+print x;
+print x * x;
