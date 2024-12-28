@@ -5,8 +5,10 @@
   x = 124;
   var a;
   {
-      var a = a;
+      var a = 0; 
       print a;
   }
+
+  if(true) print true;
   print x * x;
 }
