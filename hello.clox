@@ -1,6 +1,12 @@
-var x = "true";
-print "hello world";
-print x;
-x = 124;
-print x;
-print x * x;
+{
+  var x = "true";
+  print "hello world";
+  print x;
+  x = 124;
+  var a;
+  {
+      var a = a;
+      print a;
+  }
+  print x * x;
+}
